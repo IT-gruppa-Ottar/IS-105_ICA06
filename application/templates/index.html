@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+
+    <title>ICA06</title>
+
+    <style>
+	body{
+	     background: #F0FFFF;
+	     font-family: 'Fjalla One', sans-serif;
+	}
+	
+    </style>
+</head>
+
+<body>
+<center>
+
+    <h1> ICA 06 </h1>
+    
+    <h4> Oppgave 2 - Tekst til tale (Engelsk)</h4>
+    
+    <input type="text" placeholder="Skriv her..." id="text">
+
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <input 
+	onclick="responsiveVoice.speak($('#text').val(),$('#voiceselection').val());" 
+	type="button" 
+	value="Snakk" 
+    />
+ 
+    <script>
+        //Populate voice selection dropdown
+        var voicelist = responsiveVoice.getVoices();
+        var vselect = $("#voiceselection");
+        $.each(voicelist, function() { 
+	vselect.append($("<option />").val(this.name).text(this.name));
+        });
+    </script>
+
+    <br>	
+    <br>
+
+    <h4> Oppgave 3 - Tale til tekst (Engelsk)</h4>
+    
+    <input type="button" value="Rekord"/>
+
+    <br>
+    <br>
+
+    <textarea> </textarea>
+
+
+</center>
+</body>
+</html>
