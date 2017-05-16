@@ -4,15 +4,14 @@ import (
 	"html/template"
 	"net/http"
 	"path"
-	"./Oppgave 3"
 )
 
+/**
+Generell kode for opprettelse av en html side
+ */
 func main() {
 	http.HandleFunc("/", foo)
 	http.ListenAndServe(":8000", nil)
-	
-	speech.SetWitKey("AOW7LJCHDPCGC76I4YTKKWRJDXUVKCUM") //Wit API Key MUST be set before calling any other Wit.AI functions
-	speech.SendWitVoice("test.wav")
 }
 
 func foo(w http.ResponseWriter, r *http.Request) {
