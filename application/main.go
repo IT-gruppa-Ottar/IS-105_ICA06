@@ -4,7 +4,7 @@ import (
 	"html/template"
 	"net/http"
 	"path"
-	"./oppgave3"
+	"./Oppgave 3"
 )
 
 func main() {
