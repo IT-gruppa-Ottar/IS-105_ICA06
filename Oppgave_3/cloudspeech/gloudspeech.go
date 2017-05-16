@@ -24,6 +24,7 @@ func main() {
 	}
 
 	// Sets the name of the audio file to transcribe.
+	//Må plasseres i ROOT C:
 	filename := "/audio.raw"
 
 	// Reads the audio file into memory.
