@@ -10,7 +10,7 @@ import (
 Generell kode for opprettelse av en html side
  */
 func main() {
-	http.HandleFunc("/", foo)
+	go http.HandleFunc("/", foo)
 	http.ListenAndServe(":8000", nil)
 }
 
