@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", foo)
+	go http.HandleFunc("/", foo)
 	http.ListenAndServe(":8000", nil)
 	
 	speech.SetWitKey("AOW7LJCHDPCGC76I4YTKKWRJDXUVKCUM") //Wit API Key MUST be set before calling any other Wit.AI functions
